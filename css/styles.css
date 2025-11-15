@@ -5,6 +5,7 @@
     justify-content: center;
     align-items: center;
     text-align: center;
+    background: url('../images/portada-background.jpg') no-repeat center center/cover;
 }
 
 .IndexBodyHeader {
@@ -15,7 +16,7 @@
 }
 
 .IndexBodyHeader h1 {
-    font-weight: 300;
+    font-weight: 200;
     margin: 0;
 }
 
