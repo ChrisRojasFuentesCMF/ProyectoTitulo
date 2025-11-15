@@ -1,49 +1,77 @@
-body {
-    background-color: rgb(21, 21, 21);
-    font-family: "Poppins";
-    margin: 0;
-    padding: 0;
-    font-weight: lighter;
+/* NAV */
+nav {
+    width: 100%;
+    padding: 20px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
 }
 
+.IndexNav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.IndexNav ul li a {
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    font-weight: 300;
+    transition: 0.2s;
+}
+
+.IndexNav ul li a:hover {
+    opacity: 0.7;
+}
+
+/* PORTADA DEL ABOUT */
 .portada {
-    min-height: 100vh;
+    min-height: 60vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
+    padding-top: 80px;
+    /* para que no tape el nav */
 }
 
-.IndexBodyHeader {
-    margin: 0;
-    font-size: 90px;
+.portada h1 {
+    font-size: 70px;
     color: white;
+    margin: 0;
+    font-weight: 200;
     text-shadow: 5px 10px 10px rgba(0, 0, 0, 0.3);
 }
 
-.IndexBodyHeader h1 {
-    font-weight: 200;
-    margin: 0;
-}
-
-.Eslogan {
-    margin-top: 10px;
-    font-size: 20px;
+.portada h2 {
+    font-size: 22px;
     color: white;
+    margin-top: 10px;
+    font-weight: 300;
     text-shadow: 5px 10px 10px rgba(0, 0, 0, 0.35);
 }
 
-.Eslogan h2 {
-    font-weight: 300;
-    margin: 0;
+/* SECCIÓN ABOUT */
+.about {
+    color: white;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px;
 }
 
-.Background {
-    background-color: black;
-    position: fixed;
-    inset: 0;
-    background-image: url(../images/background.jpg);
-    z-index: -1;
-    filter: blur(10px);
+.about h2 {
+    font-weight: 300;
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+
+.about p {
+    font-weight: 200;
+    line-height: 1.7;
 }
