@@ -4,13 +4,14 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;}
+    text-align: center;
+}
 
 .IndexBodyHeader {
     margin: 0;
     font-size: 90px;
     color: white;
-    text-shadow: 5px 10px 10px rgba(0,0,0,0.3);
+    text-shadow: 5px 10px 10px rgba(0, 0, 0, 0.3);
 }
 
 .IndexBodyHeader h1 {
@@ -22,10 +23,18 @@
     margin-top: 10px;
     font-size: 20px;
     color: white;
-    text-shadow: 5px 10px 10px rgba(0,0,0,0.35);
+    text-shadow: 5px 10px 10px rgba(0, 0, 0, 0.35);
 }
 
 .Eslogan h2 {
     font-weight: 300;
     margin: 0;
+}
+
+.Background {
+    position: fixed;
+    inset: 0;
+    background-image: url(../images/background/index-background.webp);
+    z-index: -1;
+    filter: blur(10px);
 }
