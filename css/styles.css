@@ -140,6 +140,7 @@ footer {
     max-width: 900px;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 30px;
     padding: 40px 20px;
     padding-top: 70px; /* evita que quede debajo del nav */
     color: white;
@@ -154,7 +155,6 @@ footer {
 .about h1 {
     font-size: 48px;
     font-weight: 300;
-    margin-bottom: 40px;
     text-align: center;
 }
 
