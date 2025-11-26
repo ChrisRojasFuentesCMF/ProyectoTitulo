@@ -7,7 +7,8 @@
     box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
     height: 100%;
     overflow-x: hidden;
     font-family: "Poppins", sans-serif;
@@ -51,10 +52,51 @@ nav {
     position: fixed;
     inset: -30px;
     z-index: -1;
-    background-image: url(../images/background.jpg);
+    background-image: url(../images/background.png);
     background-size: cover;
     background-position: center;
     filter: blur(10px);
+}
+
+/* OSCURECER */
+.Background::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    /* ajusta a gusto */
+}
+
+.Background {
+    position: fixed;
+    inset: -30px;
+    z-index: -2;
+    background-image: url(../images/background.png);
+    background-size: cover;
+    background-position: center;
+    filter: blur(10px);
+}
+
+.Background::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.500);
+    /* OSCURECE EL FONDO */
+}
+
+/* LOGO */
+.Background-ico {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background-image: url(../images/ico.png);
+    /* tu logo */
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.10;
+    /* ajusta la transparencia del logo */
 }
 
 /* ========================================================= */
@@ -90,11 +132,16 @@ section {
 }
 
 @media (max-width: 1200px) {
-    .IndexBodyHeader h1 { font-size: 72px; white-space: normal; }
+    .IndexBodyHeader h1 {
+        font-size: 72px;
+        white-space: normal;
+    }
 }
 
 @media (max-width: 768px) {
-    .IndexBodyHeader h1 { font-size: 44px; }
+    .IndexBodyHeader h1 {
+        font-size: 44px;
+    }
 }
 
 /* ========================================================= */
