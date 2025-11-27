@@ -30,8 +30,48 @@
             </ul>
         </div>
     </nav>
-    <section>
-        <h1>PROTOTIPO EN CONSTRUCCION </h1>
+    <section class="prototype">
+        <h1>NUESTRO PROTOTIPO</h1>
+        <div class="carousel">
+
+            <!-- Radios -->
+            <input type="radio" name="slides" id="s1" checked>
+            <input type="radio" name="slides" id="s2">
+            <input type="radio" name="slides" id="s3">
+            <input type="radio" name="slides" id="s4">
+
+            <div class="slides">
+                <div class="slide">
+                    <img src="../images/prototype/prototype-use.png" alt="Uso del prototipo">
+                    <p class="caption">Un prototipo de muñequera con sensor y placa electrónica colocado en una mano.</p>
+                </div>
+                <div class="slide">
+                    <img src="../images/prototype/prototype-general.png" alt="Vista general del prototipo">
+                    <p class="caption">Vista general del circuito con Arduino, potenciómetro y LEDs conectados en una protoboard.</p>
+                </div>
+                <div class="slide">
+                    <img src="../images/prototype/prototype-arduino.png" alt="Vista del Arduino">
+                    <p class="caption">Vista más detallada del Arduino, mostrando la alimentación USB y las conexiones que van hacia la protoboard.</p>
+                </div>
+                <div class="slide">
+                    <img src="../images/prototype/prototype-protoboard.png" alt="Vista de la Protoboard">
+                    <p class="caption">Vista más detallada de la protoboard, mostrando claramente los LEDs, el potenciómetro y el piezo eléctrico conectados.</p>
+                </div>
+            </div>
+
+            <!-- Prev (apunta al anterior con wrap) -->
+            <label for="s4" class="btn prev" id="p1">‹</label>
+            <label for="s1" class="btn prev" id="p2">‹</label>
+            <label for="s2" class="btn prev" id="p3">‹</label>
+            <label for="s3" class="btn prev" id="p4">‹</label>
+
+            <!-- Next (apunta al siguiente con wrap) -->
+            <label for="s2" class="btn next" id="n1">›</label>
+            <label for="s3" class="btn next" id="n2">›</label>
+            <label for="s4" class="btn next" id="n3">›</label>
+            <label for="s1" class="btn next" id="n4">›</label>
+
+        </div>
     </section>
     <footer>
         <p>&copy; 2025 PROYECTO MUÑEQUERA. TODOS LOS DERECHOS RESERVADOS.</p>
