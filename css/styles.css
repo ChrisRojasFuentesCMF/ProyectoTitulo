@@ -367,3 +367,91 @@ footer {
         font-size: 16px;
     }
 }
+/* ============== ESTILOS ESPECÍFICOS PARA EL MANUAL ============== */
+
+/* asegurar separación del nav fijo */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 110px 20px 100px; /* top para nav fijo */
+  color: white;
+  text-shadow: 2px 4px 6px rgba(0,0,0,.4);
+  line-height: 1.7;
+  font-weight: 200;
+}
+
+/* título principal */
+.container > header h1 {
+  font-size: 40px;
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 30px;
+  color: white;
+  text-shadow: 2px 4px 6px rgba(0,0,0,.4);
+}
+
+/* secciones del manual */
+main section {
+  background: rgba(0,0,0,0.20);
+  padding: 22px;
+  border-radius: 12px;
+  margin-bottom: 22px;
+  backdrop-filter: blur(4px);
+}
+
+/* encabezados internos */
+main section h2 {
+  font-size: 26px;
+  font-weight: 300;
+  margin: 6px 0 14px;
+  color: white;
+}
+
+main section h3 {
+  font-size: 20px;
+  font-weight: 300;
+  margin: 12px 0 8px;
+  color: white;
+}
+
+main section h4 {
+  font-size: 18px;
+  font-weight: 300;
+  margin: 10px 0 6px;
+}
+
+/* párrafos y listas */
+main section p,
+main section li {
+  font-size: 17px;
+  font-weight: 200;
+  color: white;
+  margin-bottom: 8px;
+}
+
+/* listas con sangría correcta */
+main section ul,
+main section ol {
+  margin-left: 20px;
+  margin-bottom: 12px;
+}
+
+/* estilos para bloques de pasos (si los agregas) */
+.manual-box {
+  background: rgba(255,255,255,0.03);
+  padding: 16px;
+  border-radius: 10px;
+  margin: 14px 0;
+  box-shadow: 1px 2px 10px rgba(0,0,0,0.18);
+}
+
+/* separador visual */
+main section + section { margin-top: 18px; }
+
+/* responsive */
+@media (max-width: 768px) {
+  .container { padding: 100px 16px 80px; }
+  .container > header h1 { font-size: 28px; }
+  main section h2 { font-size: 20px; }
+  main section p, main section li { font-size: 16px; }
+}

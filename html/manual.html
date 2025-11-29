@@ -2,22 +2,15 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="icon" href="../images/ico.png" type="image/png">
     <link rel="stylesheet" href="../css/styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Varela+Round&display=swap"
-        rel="stylesheet">
-    <title>Manual Del Usuario</title>
-
+    <title>Manual de Usuario</title>
 </head>
 
-<body class ="about-wrapper">
-    <div class="Background">
-    </div>
+<body class="about-wrapper">
+    <div class="Background"></div>
     <nav>
         <div class="IndexNav">
             <ul>
@@ -25,14 +18,161 @@
                 <li><a href="project.html">SOBRE EL PROYECTO</a></li>
                 <li><a href="about.html">SOBRE NOSOTROS</a></li>
                 <li><a href="prototype.html">PROTOTIPO</a></li>
-                <li><a href="manual.html">MANUAL DE USUARIO</a></li>
+                <li><a href="manual.html">MANUAL USUARIO / TRABAJADOR</a></li>
                 <li><a href="contact.html">CONTACTOS</a></li>
             </ul>
         </div>
     </nav>
-    <section class="manual">
-        <h1>MANUAL EN CONSTRUCCION </h1>
-    </section>
+    <div class="container">
+        <header>
+            <h1>Manual de Usuario</h1>
+        </header>
+
+        <main>
+            <section aria-labelledby="ergonomista">
+                <h2 id="ergonomista">1. Manual para el ergonomista o ingeniero evaluador</h2>
+
+                <h3>1.1 Objetivo del dispositivo</h3>
+                <p>La muñequera inteligente permite registrar movimientos repetitivos, inclinaciones forzadas e
+                    impactos, entregando información objetiva para análisis ergonómico. El sistema ayuda a identificar
+                    patrones de riesgo, clasificar tareas y evaluar condiciones laborales de forma más eficiente.</p>
+
+                <h3>1.2 Componentes principales del sistema</h3>
+                <ul>
+                    <li>Sensores IMU (o potenciómetro + piezo en la versión prototipo)</li>
+                    <li>Microcontrolador Arduino</li>
+                    <li>LEDs indicadores (verde = normal / rojo = riesgo)</li>
+                    <li>Software de registro CSV</li>
+                    <li>Interfaz de análisis en Excel o integración SCADA/PLC</li>
+                </ul>
+
+                <h3>1.3 Procedimiento de uso</h3>
+                <h4>Paso 1 — Encendido y calibración</h4>
+                <ol>
+                    <li>Conectar la muñequera al computador o a la fuente de alimentación.</li>
+                    <li>Iniciar el software o monitor serial.</li>
+                    <li>El sistema realiza una calibración automática de 5–8 segundos:
+                        <ul>
+                            <li>El trabajador debe mantener la mano relajada.</li>
+                            <li>La muñequera debe estar fija sin movimiento brusco.</li>
+                        </ul>
+                    </li>
+                </ol>
+
+                <h4>Paso 2 — Inicio de registro</h4>
+                <ol>
+                    <li>Comenzar el turno o actividad laboral del trabajador.</li>
+                    <li>Verificar que:
+                        <ul>
+                            <li>LED verde = postura dentro de rango seguro</li>
+                            <li>LED rojo = movimiento repetitivo, brusco o postura mantenida riesgosa</li>
+                        </ul>
+                    </li>
+                    <li>El sistema almacena automáticamente todos los datos en formato CSV.</li>
+                </ol>
+
+                <h4>Paso 3 — Finalización y descarga de datos</h4>
+                <ol>
+                    <li>Detener el registro.</li>
+                    <li>Extraer el archivo CSV con valores de:
+                        <ul>
+                            <li>Pitch y Roll (grado de inclinación)</li>
+                            <li>Aceleración e impactos</li>
+                            <li>Eventos marcados como "riesgo"</li>
+                            <li>Tiempo exacto (ms)</li>
+                        </ul>
+                    </li>
+                    <li>Importar el CSV a Excel o sistema SCADA/PLC.</li>
+                </ol>
+
+                <h3>1.4 Interpretación de los datos</h3>
+                <p>Indicadores principales</p>
+                <ul>
+                    <li>Pitch/roll &gt; 35° → postura riesgosa según RULA.</li>
+                    <li>Impactos con magnitud &gt; 1.6 g → movimientos bruscos.</li>
+                    <li>Eventos repetidos en un mismo período → riesgo por repetitividad.</li>
+                </ul>
+                <p>Análisis recomendado</p>
+                <ul>
+                    <li>Generar gráfico de inclinación por tiempo.</li>
+                    <li>Identificar patrones horarios (ej. más riesgo al inicio o final del turno).</li>
+                    <li>Comparar trabajadores en tareas similares.</li>
+                    <li>Generar un informe que indique:
+                        <ul>
+                            <li>% de tiempo en postura neutral</li>
+                            <li>% de tiempo en postura riesgosa</li>
+                            <li>Número y tipo de eventos</li>
+                            <li>Recomendaciones de rediseño o pausas</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <h3>1.5 Recomendaciones de seguridad</h3>
+                <ul>
+                    <li>Verificar ajuste correcto de la muñequera.</li>
+                    <li>No usar sobre ropa gruesa (afecta lecturas).</li>
+                    <li>Evitar golpes directos al sensor.</li>
+                    <li>Revisar el cableado una vez al día.</li>
+                </ul>
+            </section>
+
+            <section aria-labelledby="trabajador">
+                <h2 id="trabajador">2. Manual de uso para el trabajador</h2>
+
+                <h3>2.1 Propósito del dispositivo</h3>
+                <p>La muñequera NO monitorea productividad, NO mide velocidad de trabajo y NO clasifica desempeño. Su
+                    único objetivo es proteger tu salud, ayudando a detectar movimientos que puedan causar dolor, fatiga
+                    o lesiones a largo plazo.</p>
+
+                <h3>2.2 Cómo colocarse el dispositivo</h3>
+                <ol>
+                    <li>Introducir la mano en la muñequera.</li>
+                    <li>Ajustar la banda sin apretar demasiado.</li>
+                    <li>Verificar que no exista roce incómodo.</li>
+                    <li>Mantener la muñeca en reposo durante la calibración inicial.</li>
+                </ol>
+
+                <h3>2.3 Cómo funciona para el trabajador</h3>
+                <ul>
+                    <li>LED verde encendido → Estás trabajando con movimientos normales.</li>
+                    <li>LED rojo → Se detectó un movimiento brusco o postura riesgosa. No es una alarma, solo un aviso
+                        informativo.</li>
+                </ul>
+
+                <h3>2.4 Qué hacer si aparece el LED rojo</h3>
+                <ul>
+                    <li>Ajustar ligeramente la postura.</li>
+                    <li>Girar menos la muñeca.</li>
+                    <li>Evitar movimientos rápidos o repetitivos.</li>
+                    <li>Si ocurre constantemente, avisar al ergonomista.</li>
+                </ul>
+
+                <h3>2.5 Qué no debes hacer</h3>
+                <ul>
+                    <li>No golpear la muñequera.</li>
+                    <li>No mojarla.</li>
+                    <li>No manipular cables o sensores.</li>
+                    <li>No sobre apretar la banda.</li>
+                </ul>
+
+                <h3>2.6 Duración de la prueba</h3>
+                <ul>
+                    <li>10–20 minutos en evaluación puntual</li>
+                    <li>1 a 2 horas en evaluación de turno</li>
+                    <li>O durante tareas específicas según indique el ergonomista</li>
+                </ul>
+                <p>El trabajador puede pedir detener la prueba en cualquier momento si siente incomodidad.</p>
+
+                <h3>2.7 Confidencialidad</h3>
+                <ul>
+                    <li>Los datos recogidos no incluyen información personal.</li>
+                    <li>No se usan para sanciones laborales.</li>
+                    <li>Se analizan únicamente con fines preventivos.</li>
+                </ul>
+            </section>
+        </main>
+
+    </div>
     <footer>
         <p>&copy; 2025 PROYECTO MUÑEQUERA. TODOS LOS DERECHOS RESERVADOS.</p>
     </footer>
